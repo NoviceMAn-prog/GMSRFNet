@@ -314,18 +314,20 @@ def main_test(test_img_list,test_mask_list,dataset):
     print(f"F1: {f1:1.4f} - Recall: {recall:1.4f} - Precision: {precision:1.4f} - IOU:{iou:1.4f}")
     print(f"std of iou:{std_iou:1.4f} - Std of recall: {std_recall:1.4f} - std of precision: {std_precision:1.4f}")
 
-test_img_list = glob("../../data/cvc_data/test/image/*.tif")
-test_mask_list = glob("../../data/cvc_data/test/mask/*.tif")
+test_img_list = glob("data/cvc_data/test/image/*.tif")
+test_mask_list = glob("data/cvc_data/test/mask/*.tif")
 dataset = 'cvc_cvc'
 main_test(test_img_list,test_mask_list,dataset)
-test_img_list = glob("../../data/test_img/images/*.jpg")
-test_mask_list = glob("../../data/test_img_m/masks/*.jpg")
-dataset = 'kvasir_kvasir'
-#test_img_list = glob("../../data/CVC-ColonDB/images/*.tiff")
-#test_mask_list = glob("../../data/CVC-ColonDB/masks/*.tiff")
+test_img_list = glob("data/kvasir_data/test/image/*.jpg")
+test_mask_list = glob("data/kvasir_data/test/mask/*.jpg")
+dataset = "Kvasir"
+main_test(test_img_list,test_mask_list,dataset)
+dataset = "CVC-ColonDB"
+test_img_list = glob("data/CVC-ColonDB/images/*.tiff")
+test_mask_list = glob("data/CVC-ColonDB/masks/*.tiff")
 main_test(test_img_list,test_mask_list,dataset)
 
-test_img_list = glob("../../data/ETIS-LaribPolypDB/ETIS-LaribPolypDB/*.tif")
-test_mask_list = glob("../../data/ETIS-LaribPolypDB/gt/*.tif")
+test_img_list = glob("data/ETIS-LaribPolypDB/ETIS-LaribPolypDB/*.tif")
+test_mask_list = glob("data/ETIS-LaribPolypDB/gt/*.tif")
 dataset = "ETIS-Larib"
 main_test(test_img_list,test_mask_list,dataset)
