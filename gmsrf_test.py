@@ -171,7 +171,6 @@ def main_test(test_img_list,test_mask_list,dataset):
 
     """ Hyperparameters """
     size = (256, 256)
-    #checkpoint_path = "files/PraNet-59.pth"
     checkpoint_path = "checkpoint.pth"
     checkpoint_path = "files/GMSRF-129.pth"
     """ Directories """
